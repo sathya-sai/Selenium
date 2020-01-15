@@ -8,6 +8,7 @@
     :keyword Python, selenium scrolling button
 """
 from selenium import webdriver
+import time
 
 
 class Scrolling:
@@ -16,13 +17,13 @@ class Scrolling:
 
         driver.get("https://www.w3schools.com/python/")
         driver.maximize_window()  # maximize the window size
-
-        # driver.execute_script("window.scrollBy(0,1000)","") # it will scroll down by pixel
+        time.sleep(3)
+        driver.execute_script("window.scrollBy(0,1000)","") # it will scroll down by pixel
 
         # element = driver.find_element_by_xpath('//*[@id="main"]/p[23]/a')  # it will scroll down till the element is found
         # driver.execute_script("arguments[0].scrollIntoView();", element)
 
-        driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")  # it will scroll down till the end
+        # driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")  # it will scroll down till the end
 
 
 if __name__ == '__main__':

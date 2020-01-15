@@ -11,6 +11,7 @@ from selenium import webdriver
 import unittest
 import HtmlTestRunner
 
+
 class MyAppTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -25,7 +26,7 @@ class MyAppTest(unittest.TestCase):
         self.driver.get("http://localhost:8085/register")
         self.driver.find_element_by_name("email_id").send_keys("rahulo@gmail.com")
         self.driver.find_element_by_name("username").send_keys("rahul")
-        self.driver.find_element_by_name("password").send_keys("sa234")
+        self.driver.find_element_by_name("password").send_keys("s234")
         self.driver.find_element_by_name("Submit").click()
         self.assertEqual("SUCESS MESSAGE", self.driver.title, "webpage is not matching")
 

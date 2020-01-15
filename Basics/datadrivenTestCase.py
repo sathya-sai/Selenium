@@ -10,6 +10,7 @@
 
 from Basics import datadrivenutill
 from selenium import webdriver
+import time
 
 
 class DataDriven:
@@ -29,6 +30,7 @@ class DataDriven:
 
             driver.find_element_by_id("username").send_keys(username)
             driver.find_element_by_id("password").send_keys(password)
+            time.sleep(5)
             driver.find_element_by_name("Submit").click()
 
             if driver.title == "successful":
@@ -39,6 +41,7 @@ class DataDriven:
                 print("test is failed")
                 datadrivenutill.writeData(path, "login", r, 3, "test failed")
             driver.get("http://localhost:8085/login")
+
 
 
 if __name__ == '__main__':
