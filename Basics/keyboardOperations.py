@@ -31,6 +31,7 @@ class Keyboard:
         # act = ActionChains(driver)
         # act.send_keys(Keys.CONTROL).send_keys("a").perform()
         time.sleep(5)
+        driver.quit()
 
 
 if __name__ == '__main__':
